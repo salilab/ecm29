@@ -55,7 +55,7 @@ is_dir = inputs.is_dir
 #####################################################
 # initialize the macro
 #####################################################
-import macros_n82
+import macros_e29
 model=IMP.Model()
 
 
@@ -65,34 +65,23 @@ model=IMP.Model()
 print(is_dir)
 mergedirectories= []
 mergedirectories.append(is_dir)    
-mc=macros_n82.AnalysisReplicaExchange0(model,
+mc=macros_e29.AnalysisReplicaExchange0(model,
                                        stat_file_name_suffix="stat",     # don't change
                                        merge_directories=mergedirectories,
                                        global_output_directory='output')
 
-feature_list=[
-    "Total_Score",
-    "ElectronMicroscopy2D_None",
-    "ISDCrossLinkMS_Distance_intrarb",
-    "ISDCrossLinkMS_Distance_interrb",
-    "ISDCrossLinkMS_Data_Score",
-    "SimplifiedModel_Linker_Score_None",
-    "ExcludedVolumeSphere_None",
-    "ISDCrossLinkMS_Psi",
-    "ISDCrossLinkMS_Sigma"
-    ]
+
+feature_list=["Total_Score",
+              "ConnectivityRestraint_None",
+              "CrossLinkingMassSpectrometryRestraint_Data_Score",
+              "ExcludedVolumeSphere_all",
+              "ExcludedVolumeSphere_ecm29"
+              ]
 
 reduced_density_dict=None
 
-components_names={"Nup82.1":"Nup82.1",
-                  "Nup82.2":"Nup82.2",
-                  "Dyn2.1":"Dyn2.1",
-                  "Dyn2.2":"Dyn2.2",
-                  "Nsp1.1_CTD":(637,823,"Nsp1.1"),
-                  "Nsp1.2_CTD":(637,823,"Nsp1.2"),
-                  "Nup159.1_CTD":(1117,1460,"Nup159.1"),
-                  "Nup159.2_CTD":(1117,1460,"Nup159.2")}
-
+components_names={"ecm29_352":(1,504,"ecm29"), 
+                  "ecm29_689":(505, 1845, "ecm29")}
 
 mc.clustering("Total_Score",  
               "rmf_file",                          
