@@ -1,0 +1,23 @@
+|molecule_name|color|fasta_fn|fasta_id|pdb_fn|chain|residue_range|pdb_offset|bead_size|em_residues_per_gaussian|rigid_body|super_rigid_body|chain_of_super_rigid_bodies|
+|Rpt6|light blue      |sequences.fasta|h26s_flex_fix:J|Huang_aligned.pdb|J|1,END|0|10|0||||
+|Rpt4|deep sky blue   |sequences.fasta|h26s_flex_fix:L|Huang_aligned.pdb|L|1,END|0|10|0||||
+|Rpt5|blue            |sequences.fasta|h26s_flex_fix:M|Huang_aligned.pdb|M|1,END|0|10|0||||
+|Rpt2|dark cyan       |sequences.fasta|h26s_flex_fix:I|Huang_aligned.pdb|I|1,END|0|10|0||||
+|Rpt3|cyan            |sequences.fasta|h26s_flex_fix:K|Huang_aligned.pdb|K|1,END|0|10|0||||
+|Rpt1|cornflower blue |sequences.fasta|h26s_flex_fix:H|Huang_aligned.pdb|H|1,END|0|10|0||||
+|Rpn12|green|sequences.fasta|h26s_flex_fix:T|Huang_aligned.pdb|T|1,END|0|10|0||||
+|Rpn10|dark green|sequences.fasta|h26s_flex_fix:W|Huang_aligned.pdb|W|1,END|0|10|0||||
+|Rpn11|dark khaki|sequences.fasta|h26s_flex_fix:V|Huang_aligned.pdb|V|1,END|0|10|0||||
+|Rpn15|dark olive green|sequences.fasta|h26s_flex_fix:Y|Huang_aligned.pdb|Y|1,END|0|10|0||||
+|Rpn1|forest green|sequences.fasta|h26s_flex_fix:Z|Huang_aligned.pdb|Z|1,END|0|10|0||||
+|Rpn2|khaki|sequences.fasta|h26s_flex_fix:N|Huang_aligned.pdb|N|1,END|0|10|0||||
+|Rpn3|light green|sequences.fasta|h26s_flex_fix:S|Huang_aligned.pdb|S|1,END|0|10|0||||
+|Rpn5|light sea green|sequences.fasta|h26s_flex_fix:P|Huang_aligned.pdb|P|1,END|0|10|0||||
+|Rpn6|lime green|sequences.fasta|h26s_flex_fix:Q|Huang_aligned.pdb|Q|1,END|0|10|0||||
+|Rpn7|sea green|sequences.fasta|h26s_flex_fix:R|Huang_aligned.pdb|R|1,END|0|10|0||||
+|Rpn8|spring green|sequences.fasta|h26s_flex_fix:U|Huang_aligned.pdb|U|1,END|0|10|0||||
+|Rpn9|olive drab|sequences.fasta|h26s_flex_fix:O|Huang_aligned.pdb|O|1,END|0|10|0||||
+|ecm29|red|sequences.fasta|ecm29:A|ecm29_352domat.pdb|A|    1, 504|0|10|0||101||
+|ecm29|red|sequences.fasta|ecm29:A|ecm29_686domat.pdb|A|  505,1845|0|10|0||101||
+
+
