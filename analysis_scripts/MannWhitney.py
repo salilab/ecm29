@@ -11,7 +11,7 @@ def get_u_statistics(x, y):
     return u_stat, p_stat, math.sqrt(effect_size**2)
 
 def get_ks2_statistics(x,y):
-    d_stat, p_value = ks_2samp(x,y)
+    d_stat, p_stat = ks_2samp(x,y)
     return d_stat, p_stat
 
 S1 = []
