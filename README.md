@@ -43,4 +43,7 @@ _Testable_: Yes
 
 _Parallelizeable_: Yes
 
-_Publications_: TBD
+_Publications_: 
+Xiaorong Wang, Ilan E Chemmama, Clinton Yu, Alexander Huszagh, Yue Xu, Rosa Viner, Sarah Ashley Block, Peter Cimermancic, Scott D Rychnovsky, Yihong Ye, Andrej Sali, and Lan Huang
+*The Proteasome-Interacting Ecm29 Protein Disassembles the 26S Proteasome in Response to Oxidative Stress*
+**J. Biol. Chem.** jbc.M117.803619. doi:10.1074/jbc.M117.803619
