@@ -20,7 +20,7 @@ import IMP.pmi.restraints.crosslinking
 #---------------------------
 # Define Input Files
 #---------------------------
-datadirectory = "/scrapp/ilan/ECM29/19S/data/"
+datadirectory = "../data/"
 topology_file = datadirectory+"topology.txt"
 
 #--------------------------

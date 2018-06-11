@@ -23,7 +23,9 @@ module load openmpi-1.6-nodlopen
 i=$(($SGE_TASK_ID - 1))
 DIR=modeling$i
 
-MODELING_SCRIPT=/scrapp/ilan/ECM29/19S/Running_Directory_4/smodeling.py
+REPO_DIR=/scrapp/ilan/ECM29/19S/
+MODELING_SCRIPT=${REPO_DIR}/production_scripts/smodeling.py
+ln -sf ${REPO_DIR}/data .
 hostname
 date
 
