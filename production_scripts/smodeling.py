@@ -1,3 +1,4 @@
+from __future__ import print_function
 import IMP
 import RMF
 import IMP.atom
@@ -54,7 +55,7 @@ topology = IMP.pmi.topology.TopologyReader(topology_file,
                                            fasta_dir = datadirectory,
                                            )
 domains = topology.get_components()
-print '#'*10,domains
+print('#'*10,domains)
 
 bs = IMP.pmi.macros.BuildSystem(m)
 bs.add_state(topology)
@@ -83,7 +84,7 @@ sampleobjects = [] # sampling objects
 #  To speed up this expensive restraint, we operate it at resolution 20
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
-print "ilan0", sf.evaluate(False)
+print("ilan0", sf.evaluate(False))
 
 ecm29 = []
 p26ps = []
@@ -121,7 +122,7 @@ print(ecm29)
 print(p26ps)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
-print "ilan0", sf.evaluate(False)
+print("ilan0", sf.evaluate(False))
 ev1 = IMP.pmi.restraints.stereochemistry.ExcludedVolumeSphere(included_objects = ecm29,
                                                               resolution=10)
 ev1.add_to_model()
@@ -129,7 +130,7 @@ ev1.set_label('ecm29')
 outputobjects.append(ev1)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
-print "ilan1", sf.evaluate(False)
+print("ilan1", sf.evaluate(False))
 
 ev2 = IMP.pmi.restraints.stereochemistry.ExcludedVolumeSphere(included_objects = ecm29,
                                                               other_objects = p26ps,
@@ -141,7 +142,7 @@ ev2.set_label('all')
 outputobjects.append(ev2)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
-print "ilan2", sf.evaluate(False)
+print("ilan2", sf.evaluate(False))
 
 # Crosslinks - dataset 1
 #  To use this restraint we have to first define the data format
@@ -173,7 +174,7 @@ outputobjects.append(xl1)
 dof.get_nuisances_from_restraint(xl1)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
-print "ilan3", sf.evaluate(False)
+print("ilan3", sf.evaluate(False))
 
 IMP.pmi.tools.shuffle_configuration(ecm29)
 dof.optimize_flexible_beads(100)
