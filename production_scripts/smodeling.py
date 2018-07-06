@@ -7,8 +7,11 @@ import IMP.algebra
 import IMP.container
 import IMP.rmf
 import os, sys
-import DLFCN as dl; 
-sys.setdlopenflags(dl.RTLD_NOW|dl.RTLD_GLOBAL)
+try:
+    import DLFCN as dl;
+    sys.setdlopenflags(dl.RTLD_NOW|dl.RTLD_GLOBAL)
+except ImportError:
+    pass
 import IMP.pmi
 import IMP.pmi.topology
 import IMP.pmi.dof
