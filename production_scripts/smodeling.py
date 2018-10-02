@@ -56,6 +56,8 @@ domains = topology.get_components()
 print('#'*10,domains)
 
 bs = IMP.pmi.macros.BuildSystem(m)
+bs.dry_run = '--dry-run' in sys.argv
+
 bs.add_state(topology)
 representation, dof = bs.execute_macro(max_rb_trans=rb_max_trans, 
                                        max_rb_rot=rb_max_rot, 
@@ -174,8 +176,9 @@ dof.get_nuisances_from_restraint(xl1)
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
 print("ilan3", sf.evaluate(False))
 
-IMP.pmi.tools.shuffle_configuration(ecm29)
-dof.optimize_flexible_beads(100)
+if not bs.dry_run:
+    IMP.pmi.tools.shuffle_configuration(ecm29)
+    dof.optimize_flexible_beads(100)
 
 #--------------------------
 # Monte-Carlo Sampling
@@ -195,7 +198,8 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     number_of_best_scoring_models=10,
                                     monte_carlo_steps=num_mc_steps,
                                     number_of_frames=num_frames,
-                                    global_output_directory="output")
+                                    global_output_directory="output",
+                                    test_mode=bs.dry_run)
 
 # Start Sampling
 mc1.execute_macro()
