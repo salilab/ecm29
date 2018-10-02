@@ -7,7 +7,9 @@ import IMP.algebra
 import IMP.container
 import IMP.rmf
 import os, sys
+import ihm
 import IMP.pmi
+import IMP.pmi.mmcif
 import IMP.pmi.topology
 import IMP.pmi.dof
 import IMP.pmi.macros
@@ -57,6 +59,15 @@ print('#'*10,domains)
 
 bs = IMP.pmi.macros.BuildSystem(m)
 bs.dry_run = '--dry-run' in sys.argv
+
+if '--mmcif' in sys.argv:
+    # Record the modeling protocol to an mmCIF file
+    po = IMP.pmi.mmcif.ProtocolOutput(open('ecm29.cif', 'w'))
+    bs.system.add_protocol_output(po)
+    po.system.title = ('The proteasome-interacting Ecm29 protein disassembles '
+                       'the 26S proteasome in response to oxidative stress')
+    # Add publication
+    po.system.citations.append(ihm.Citation.from_pubmed_id(28821611))
 
 bs.add_state(topology)
 representation, dof = bs.execute_macro(max_rb_trans=rb_max_trans, 
@@ -204,3 +215,54 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
 # Start Sampling
 mc1.execute_macro()
 
+if '--mmcif' in sys.argv:
+    # Correct number of output models to account for multiple runs
+    protocol = po.system.orphan_protocols[-1]
+    protocol.steps[-1].num_models_end = 3750000
+    # Next, we filtered down to 109951 good scoring models
+    analysis = ihm.analysis.Analysis()
+    protocol.analyses.append(analysis)
+    analysis.steps.append(ihm.analysis.FilterStep(
+                            feature='energy/score',
+                            num_models_begin=3750000, num_models_end=109951))
+
+    # Finally, we found two clusters
+    clusters = [{'rmf':'280_5415.rmf3'},
+                {'rmf':'307_6895.rmf3'}]
+    for ncluster, cluster in enumerate(clusters):
+        with open('../Results/clustering/cluster.%d.all.txt' % ncluster) as fh:
+            cluster['size'] = len(fh.readlines())
+
+    analysis.steps.append(ihm.analysis.ClusterStep(
+                            feature='RMSD', num_models_begin=109951,
+                            num_models_end=sum(x['size'] for x in clusters)))
+
+    for ncluster, cluster in enumerate(clusters):
+        e = po._add_simple_ensemble(analysis.steps[-1],
+                                    name="Cluster %d" % ncluster,
+                                    num_models=cluster['size'],
+                                    drmsd=None, num_models_deposited=1,
+                                    localization_densities={},
+                                    ensemble_file=None)
+        # Add localization density for ecm29
+        loc = ihm.location.OutputFileLocation(
+               '../Results/localizations_densities/%d_ecm29.mrc' % (ncluster+1))
+        den = ihm.model.LocalizationDensity(file=loc,
+                                            asym_unit=po.asym_units['ecm29.0'])
+        e.densities.append(den)
+
+        # Add one output model - todo: doesn't currently work because RMF
+        # topology doesn't match that here
+#       rh = RMF.open_rmf_file_read_only('../Results/clustering/%s'
+#                                        % cluster['rmf'])
+#       IMP.rmf.link_hierarchies(rh, [representation])
+#       IMP.rmf.load_frame(rh, RMF.FrameID(0))
+
+#       model = po.add_mdoel(e.model_group)
+
+    # Correct crosslinker type from "Lan" to DSSO
+    for r in po.system.restraints:
+        if hasattr(r, 'linker_type') and r.linker_type == 'Lan':
+            r.linker_type = 'DSSO'
+
+    po.flush()
