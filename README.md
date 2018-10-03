@@ -2,6 +2,12 @@ These scripts demonstrate the use of [IMP](https://integrativemodeling.org), [MO
 
 **Localizing ecm29 on the proteasome using integrative structure modeling**  
 
+**Comparative modeling of ecm29 (2 domains)**
+Representation of ecm29 relied on (i) comparative models of 2 ecm29 domains built with MODELLER 9.17 (Sali and Blundell, 1993) based on the known related structures detected by HHPred (Soding, 2005; Soding et al. 2005) and (ii) secondary structure and disordered regions predicted by PSIPRED based on the ecm29 sequence (Buchan et al., 2013; Jones, 1999); see file **ecm29.hhp**
+The sequences of the two templates (1U6G and 3w3w) and ecm29 can be found in **template.ali**.
+The two templates have PDB code 1U6G and 3w3w respectively, with alignment to ecm29 in **aligs.pir**.
+To obtain the comparative model, run **model.py** by specifying **known** and **sequence** in modeling function. 
+
 **Input data (directory *data*):**  
 63 DSSO cross-links involving ecm29 were identified via mass spectrometry; 56 of these cross-links were intramolecular and seven were intermolecular with the 19S proteasome, informing respectively the ecm29 conformation and the localization of ecm29 relative to the proteasome.   
 The 26S proteasome structure used was obtained from the PDB (code 5GJR); it was determined primarily based on a cryo-EM density map at 3.8Å resolution (EMDB code: 9508) {Huang, 2016 NSMB}.   
