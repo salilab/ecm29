@@ -215,7 +215,33 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
 # Start Sampling
 mc1.execute_macro()
 
+def fix_rmf_file(original_rmf, molnames, tmpd):
+    # Put the molecules in original_rmf in the given order, and return the
+    # fixed RMF file name
+    m = IMP.Model()
+    rh = RMF.open_rmf_file_read_only(original_rmf)
+    h = IMP.rmf.create_hierarchies(rh, m)
+    state, = h[0].get_children()
+    children = state.get_children()
+
+    names = {}
+    for c in children:
+        state.remove_child(0)
+        names[c.get_name()] = c
+
+    for mn in molnames:
+        state.add_child(names[mn])
+
+    rmf_file = os.path.join(tmpd, 'new.rmf')
+    rh = RMF.create_rmf_file(rmf_file)
+    IMP.rmf.add_hierarchies(rh, h)
+    IMP.rmf.save_frame(rh)
+    del rh
+    return rmf_file
+
 if '--mmcif' in sys.argv:
+    import tempfile
+    import shutil
     # Correct number of output models to account for multiple runs
     protocol = po.system.orphan_protocols[-1]
     protocol.steps[-1].num_models_end = 3750000
@@ -237,6 +263,7 @@ if '--mmcif' in sys.argv:
                             feature='RMSD', num_models_begin=109951,
                             num_models_end=sum(x['size'] for x in clusters)))
 
+    tmpd = tempfile.mkdtemp()
     for ncluster, cluster in enumerate(clusters):
         e = po._add_simple_ensemble(analysis.steps[-1],
                                     name="Cluster %d" % ncluster,
@@ -251,14 +278,16 @@ if '--mmcif' in sys.argv:
                                             asym_unit=po.asym_units['ecm29.0'])
         e.densities.append(den)
 
-        # Add one output model - todo: doesn't currently work because RMF
-        # topology doesn't match that here
-#       rh = RMF.open_rmf_file_read_only('../Results/clustering/%s'
-#                                        % cluster['rmf'])
-#       IMP.rmf.link_hierarchies(rh, [representation])
-#       IMP.rmf.load_frame(rh, RMF.FrameID(0))
+        # Add one output model
+        rmf_file = fix_rmf_file('../Results/clustering/%s' % cluster['rmf'],
+                                moldict, tmpd)
+        rh = RMF.open_rmf_file_read_only(rmf_file)
+        IMP.rmf.link_hierarchies(rh, [representation])
+        IMP.rmf.load_frame(rh, RMF.FrameID(0))
+        del rh
 
-#       model = po.add_mdoel(e.model_group)
+        model = po.add_model(e.model_group)
+    shutil.rmtree(tmpd)
 
     # Correct crosslinker type from "Lan" to DSSO
     for r in po.system.restraints:
