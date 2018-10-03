@@ -1,0 +1,178 @@
+>3w3w_A Importin subunit beta-3; heat repeat, nuclear import, protein transport-DNA binding P complex; 2.20A
+  {Saccharomyces cerevisiae} PDB:  3w3t _A  3w3x _A  3w3y _A  4zj7 _A  3w3v _A  3w3u _A  3w3z _A*
+  Probab=100.00  E-value=3.8e-27  Score=336.26  Aligned_cols=938  Identities=13%  Similarity=0.081  Sum_probs=0.0
+
+  Q ss_pred             hhhhHHHHHHHHHHHHHHHhcCCHHHHHHHHHHHHH-HhccCC-chhhHHHHHHHHHHhccccchHHHHhHHHHHHHHHH
+  Q Thu_May_12_19:  684 PEKLATKFVDKTEWIKSLMNNSKEEMRELAALFYSV-VVSTVS-GNELKSMIEQLIKTTKDNHSPEIQHGSLLALGFTVG  761 (1845)
+  Q Consensus       684 p~~~~~~~~~~~~~L~~~~~~~~~~~r~~aa~~l~~-i~~~~~-~~~~~~~l~~l~~~l~~~~~~~~~~~al~~~~~ll~  761 (1845)
+                        ++...+...+.+..+...+.+++.+.|..|...+.. +....+ ....    ..++..+.+..+...|..+...+..++.
+  T Consensus         1 ~~~~~~~~~~~l~~lL~~~~s~d~~~r~~A~~~L~~~~~~~~p~~~~~----~~l~~~l~~~~~~~vR~~A~~~L~~~i~   76 (1078)
+  T 3w3w_A            1 MSALPEEVNRTLLQIVQAFASPDNQIRSVAEKALSEEWITENNIEYLL----TFLAEQAAFSQDTTVAALSAVLFRKLAL   76 (1078)
+  T ss_dssp             --CCCHHHHHHHHHHHHHSCC-CCHHHHHHHHCCCCCCSSTTTHHHHH----HHHHHHHHHCSCHHHHHHHHHHHHHHHH
+  T ss_pred             CCCCCHHHHHHHHHHHHHhcCCChHHHHHHHHHHHHHhhcCCchhHHH----HHHHHHHHcCCChHHHHHHHHHHHHHhc
+
+
+  Q ss_pred             HH-HHhcccccchhhcccccccchhhHHHHHHHHHHHHHHHHcc-CCHHHHHHHHHHHHHHHHhCCCCCccccchhhHHH
+  Q Thu_May_12_19:  762 RY-LAKKKMRMSEQQDLERNADTLPDQEELIQSATETIGSFLDS-TSPLLAIAACTALGEIGRNGPLPIPSEGSGFTKLH  839 (1845)
+  Q Consensus       762 ~~-~~~~~~~~~~~~~~~~~~~~~~~~~~il~~~l~~L~~~l~~-~~~~~~~aa~~~l~~l~~~~~~~~~~~~~~~~~~~  839 (1845)
+                        .. ......                   .....+.+.+...+.+ .+..+|..++.+++.++.....     .    |++
+  T Consensus        77 ~~~~~~l~~-------------------~~~~~i~~~ll~~l~~~~~~~vr~~~a~~l~~ia~~~~~-----~----w~~  128 (1078)
+  T 3w3w_A           77 KAPITHIRK-------------------EVLAQIRSSLLKGFLSERADSIRHKLSDAIAECVQDDLP-----A----WPE  128 (1078)
+  T ss_dssp             HTTGGGSCH-------------------HHHHHHHHHHHHHHHSCCCHHHHHHHHHHHHTTCCTTSC-----C----CHH
+  T ss_pred             ccCCccCCH-------------------HHHHHHHHHHHHHHHhCCcHHHHHHHHHHHHHHHHHhhh-----h----hHH
+
+
+  Q ss_pred             HHHHHHHHHhccccchhHHHHHHHHHHHHHcCCCcchhHHHHHHHHHHhcccCchHHHHHHHHHHHHHHcCCCccccccc
+  Q Thu_May_12_19:  840 LVESLLSRIPSSKETNKMKERAIQTLGYFPVGDGDFPHQKLLLQGLMDSVEAKQIELQFTIGEAITSAAIGTSSVAARDA  919 (1845)
+  Q Consensus       840 ll~~l~~~l~~~~~~~~~r~~Ai~~L~~L~~~~p~~~~~~~il~~l~~~~~~~~~~vr~~a~~aL~~l~~~~~~~~~~~~  919 (1845)
+                        +++.+.+.+.+  .+...|..|+.+|+.++...+ ......+++.+...+.+++..+|..+.+++..++........   
+  T Consensus       129 ll~~L~~~l~~--~~~~~r~~al~~L~~l~~~~~-~~~~~~l~~~l~~~l~~~~~~vr~~a~~~l~~~~~~~~~~~~---  202 (1078)
+  T 3w3w_A          129 LLQALIESLKS--GNPNFRESSFRILTTVPYLIT-AVDINSILPIFQSGFTDASDNVKIAAVTAFVGYFKQLPKSEW---  202 (1078)
+  T ss_dssp             HHHHHHHHHHS--SCHHHHHHHHHHHHHCTHHHH-HSCHHHHHHHHHHHTTCSCHHHHHHHHHHHHHHHHHSCGGGG---
+  T ss_pred             HHHHHHHHHcC--CCHHHHHHHHHHHHHHHHHhc-cchHHHHHHHHHHHhCCCcHHHHHHHHHHHHHHHHhCCHHHH---
+
+
+  Q ss_pred             cccchhhccccccccchhHHHHHHHHHHHHHcCCCCHHHHHHHHHHHHHHHHHcCCcHHHHHHHHHHHHHHHHHhCCC--
+  Q Thu_May_12_19:  920 WQMTEEEYTPPAGAKVNDVVPWVLDVILNKHIISPNPHVRQAACIWLLSLVRKLSTHKEVKSHLKEIQSAFVSVLSEN--  997 (1845)
+  Q Consensus       920 ~~~~l~~~~~~~~~~~~~~l~~ll~~il~~~l~~~~~~~r~~a~~~L~~l~~~~~~~~~~~~~l~~i~~~l~~~l~d~--  997 (1845)
+                                     ......++.+++.+ ...+.+.++..|..++.++..++..++  ..+.+++..+++.+...+.+.  
+  T Consensus       203 -------------~~~~~~l~~ll~~l-~~~~~~~~~~~~~~~~~~l~~l~~~~~--~~~~~~~~~li~~~~~~~~~~~~  266 (1078)
+  T 3w3w_A          203 -------------SKLGILLPSLLNSL-PRFLDDGKDDALASVFESLIELVELAP--KLFKDMFDQIIQFTDMVIKNKDL  266 (1078)
+  T ss_dssp             -------------GGTGGGHHHHHHHT-HHHHHTTCHHHHHHHHHHHHHHHHHCG--GGGGGGHHHHHHHHHHHHHCTTS
+  T ss_pred             -------------HHHHHHHHHHHHHH-HHHHhCCCHHHHHHHHHHHHHHHHhCH--HHHHHHHHHHHHHHHHHHCCCCC
+
+
+  Q ss_pred             cHHHHHHHHHHHHHHHHhccH------HHHHHHHHHHHHHHhcCCcccccCCcchhhccchhccCCCCCC----------
+  Q Thu_May_12_19:  998 DELSQDVASKGLGLVYELGNE------QDQQELVSTLVETLMTGKRVKHEVSGETVVFQGGALGKTPDGQ---------- 1061 (1845)
+  Q Consensus       998 ~~~vr~~A~~~L~~l~~~~~~------~~~~~lv~~L~~~l~~~~~~~~~~~~~~~~~~~~al~~~~~~~---------- 1061 (1845)
+                        ++.+|..|...+..+....+.      .....+++.++..+....                      ...          
+  T Consensus       267 ~~~vr~~a~~~l~~l~~~~~~~~~~~~~~~~~l~~~ll~~l~~~~----------------------~d~~d~~~w~~~~  324 (1078)
+  T 3w3w_A          267 EPPARTTALELLTVFSENAPQMCKSNQNYGQTLVMVTLIMMTEVS----------------------IDDDDAAEWIESD  324 (1078)
+  T ss_dssp             CHHHHHHHHHHHHHHHHHCHHHHHTCHHHHHHHHHHHHHHHTCCS----------------------TTCTTCHHHHTSC
+  T ss_pred             CHHHHHHHHHHHHHHHHhhHHHHHhhHHHHHHHHHHHHHHHhccC----------------------CCcchhhHhccCC
+
+
+  Q ss_pred             ---------CcchHHHHHHHHHHcCChhHHHHHHHHhh---cccccchHHHHHHHHHHHHHHhhHHHHHHHHHHHHHHHH
+  Q Thu_May_12_19: 1062 ---------GLSTYKELCSLASDLSQPDLVYKFMNLAN---HHAMWNSRKGAAFGFNVIATRAGEQLAPFLPQLVPRLYR 1129 (1845)
+  Q Consensus      1062 ---------~~~~~~~l~~la~~~~~~~li~~l~~~~~---~~~~~~~r~~a~~~l~~l~~~~~~~l~~~l~~ll~~L~~ 1129 (1845)
+                                 .......+..++...|...+++.++..+.   .+..|..|.+++.+++.++...++.+.++++.+++.++.
+  T Consensus       325 ~~~dd~d~~~~~a~~~l~~l~~~~~~~~~~~~l~~~l~~~l~~~~~~~r~aal~~l~~i~~~~~~~~~~~l~~ll~~l~~  404 (1078)
+  T 3w3w_A          325 DTDDEEEVTYDHARQALDRVALKLGGEYLAAPLFQYLQQMITSTEWRERFAAMMALSSAAEGCADVLIGEIPKILDMVIP  404 (1078)
+  T ss_dssp             SSCCTTCHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHTCSCHHHHHHHHHHHHHHTTTTHHHHTTCHHHHHHHHGG
+  T ss_pred             CccccccchHHHHHHHHHHHHHHCCcHHHHHHHHHHHHHHhCCCCHHHHHHHHHHHHHHHHhhhHHHHHHHHHHHHHHHH
+
+
+  Q ss_pred             hccCCChHHHHHHHHHHHHHhcCch--hHHHHHHHHHHHHHHhCCCCC-chHHHHHHHHHHHHHhcCCHHHHHHHHHHHH
+  Q Thu_May_12_19: 1130 YQFDPNLGIRQAMTSIWNALVTDKS--MVDKYLKEILQDLVKNLTSNM-WRVRESSCLALNDLLRGRPLDDIIDKLPEIW 1206 (1845)
+  Q Consensus      1130 ~~~D~~~~vr~~~~~il~~l~~~~~--~i~~~~~~il~~ll~~l~~~~-~~vr~~a~~aL~~l~~~~~~~~~~~~~~~l~ 1206 (1845)
+                        ...|+++.||..+..+++.+.....  ....++..+++.++..+.+.. +++|..++.+|..+++..+.+.+.+|++.++
+  T Consensus       405 ~l~d~~~~Vr~~a~~~l~~l~~~~~~~~~~~~~~~il~~l~~~l~~~~~~~v~~~a~~aL~~l~~~~~~~~l~~~l~~i~  484 (1078)
+  T 3w3w_A          405 LINDPHPRVQYGCCNVLGQISTDFSPFIQRTAHDRILPALISKLTSECTSRVQTHAAAALVNFSEFASKDILEPYLDSLL  484 (1078)
+  T ss_dssp             GGGCSSHHHHHHHHHHHHHHHHHTTTHHHHHHHHHHHHHHHHHTSTTSCHHHHHHHHHHHHHHHHTCCHHHHGGGHHHHH
+  T ss_pred             HccCcChHHHHHHHHHHHHHHHHccHHHHHHHHHHHHHHHHHHhcCCCcHHHHHHHHHHHHHHHhcCCHHHHHHHHHHHH
+
+
+  Q ss_pred             HHHHHHHhcCcHHHHHHHHHHHHHHHHHHHHHcCCccChhhHHHHHHHHHHHHHhhccC--CHHHHHHHHHHHHHHHHHh
+  Q Thu_May_12_19: 1207 ETLFRVQDDIKESVRKAAELALKTLSKVCVKMCDPAKGAAGQRTIAALLPCLLDKGMMS--TVTEVRALSINTLVKISKS 1284 (1845)
+  Q Consensus      1207 ~~l~~~l~d~~~~Vr~aa~~~l~~L~~~~~~~~d~~~~~~~~~~l~~~l~~Ll~~~l~d--~~~~vr~~al~~L~~L~~~ 1284 (1845)
+                        ..+...+.+.+..+|..+..+++.+........        .++++.++|.+.......  +...+|..++.+++.+++.
+  T Consensus       485 ~~l~~~l~~~~~~v~~~a~~~l~~l~~~~~~~~--------~~~~~~l~~~L~~~l~~~~~~~~~lr~~a~~~l~~l~~~  556 (1078)
+  T 3w3w_A          485 TNLLVLLQSNKLYVQEQALTTIAFIAEAAKNKF--------IKYYDTLMPLLLNVLKVNNKDNSVLKGKCMECATLIGFA  556 (1078)
+  T ss_dssp             HHHHHHHTCSSHHHHHHHHHHHHHHHHHHGGGG--------GGGHHHHHHHHHHHHHCC----HHHHHHHHHHHHHHHHH
+  T ss_pred             HHHHHHHhcCcHHHHHHHHHHHHHHHHHHHHHH--------HHHHHHHHHHHHHHHHhCCHHHHHHHHHHHHHHHHHHHH
+
+
+  Q ss_pred             cc-HHHHhHHHHHHHHHHHHHhhcCchHHHHHHHhccccccchhHHHHHHHhhcCcHHHHHHHHHhhcCHHHHHHHHHHH
+  Q Thu_May_12_19: 1285 AG-AMLKPHAPKLIPALLESLSVLEPQVLNYLSLRATEQEKAAMDSARLSAAKSSPMMETINMCLQYLDVSVLGELVPRL 1363 (1845)
+  Q Consensus      1285 ~~-~~~~~~l~~l~~~Ll~~L~~~e~~~~~~~~~~~~~~~~~~~~~~r~~a~~~s~ll~~l~~~~~~~~~~~~~~ll~~L 1363 (1845)
+                        .| ..+.++++.+++.++..++....                ..+..+.....   .+..+...++....++++.++|.+
+  T Consensus       557 ~g~~~~~~~~~~ll~~l~~~~~~~~~----------------~~~~~~~~~~~---~l~~l~~~~~~~~~~~l~~il~~l  617 (1078)
+  T 3w3w_A          557 VGKEKFHEHSQELISILVALQNSDID----------------EDDALRSYLEQ---SWSRICRILGDDFVPLLPIVIPPL  617 (1078)
+  T ss_dssp             HCHHHHTTTHHHHHHHHHHHHTCC---------------------HHHHHHHH---HHHHHHHHHGGGGGGGHHHHHHHH
+  T ss_pred             hCHHhhHhhHHHHHHHHHHHhccCCC----------------cCChhHHHHHH---HHHHHHHHchHhHHHHHHHHHHHH
+
+
+  Q ss_pred             HHHHhcCCChHH----------------------------------HHHHHHHHHHHHHHhHHHHHhhHHHH-HHHHHHH
+  Q Thu_May_12_19: 1364 CELIRSGVGLGT----------------------------------KGGCASVIVSLTTQCPQDLTPYSGKL-MSALLSG 1408 (1845)
+  Q Consensus      1364 l~~l~~~~~~~~----------------------------------r~~al~~L~~l~~~~~~~~~~~~~~l-l~~l~~~ 1408 (1845)
+                        ++.+....+...                                  |..++.+++.++...+..+.||.+.+ ...+...
+  T Consensus       618 l~~l~~~~~~~~~d~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~k~~a~~~l~~~~~~~~~~~~p~~~~~~~~~l~~~  697 (1078)
+  T 3w3w_A          618 LITAKATQDVGLIEEEEAANFQQYPDWDVVQVQGKHIAIHTSVLDDKVSAMELLQSYATLLRGQFAVYVKEVMEEIALPS  697 (1078)
+  T ss_dssp             HHHHTCCCCEEEECSTTSSSGGGSTTCEEEESSSSEEEECHHHHHHHHHHHHHHHHHHHHHGGGGHHHHHHHCCCCCHHH
+  T ss_pred             HHHHhcCCCccCCCcccchhccccccchhcccCCceeeeeHHHHHHHHHHHHHHHHHHHHHHHhhHHHHHHHHHHHHHHh
+
+
+  Q ss_pred             hc-CCCHHHHHHHHHHHHHHHHHcCH----------HHHHHHHHHHHHHh-ccCCcHHHHHHHHHHHHHHHhhCHHHH-H
+  Q Thu_May_12_19: 1409 LT-DRNSVIQKSCAFAMGHLVRTSRD----------SSTEKLLQKLNGWY-MEKEEPIYKTSCALTIHAIGRYSPDVL-K 1475 (1845)
+  Q Consensus      1409 L~-d~~~~Vr~~a~~aL~~l~~~~~~----------~~~~~ll~~L~~~l-~~~~~~~~r~~~~~l~~~L~~~~~~~~-~ 1475 (1845)
+                        ++ +.++.||.+|+.+++.++.....          ..+..+++.+...+ .+.+......+...+...+...++..+ .
+  T Consensus       698 l~~~~~~~vR~~a~~~l~~l~~~~~~~~g~~~~~~~~~~~~~~~~ll~~l~~e~~~~v~~~~l~~l~~~~~~~~~~~l~~  777 (1078)
+  T 3w3w_A          698 LDFYLHDGVRAAGATLIPILLSCLLAATGTQNEELVLLWHKASSKLIGGLMSEPMPEITQVYHNSLVNGIKVMGDNCLSE  777 (1078)
+  T ss_dssp             HTCTTCHHHHHHHHHHHHHHHHHHHHC-----CHHHHHHHHHHHHHHHHTTTCCCHHHHHHHHHHHHHHHHHHCTTCSCH
+  T ss_pred             ccccCChHHHHHHHHHHHHHHHHHHHhcCCchHHHHHHHHHHHHHHHHHHHcCCcHHHHHHHHHHHHHHHHHhCcCCCCH
+
+
+  Q ss_pred             HHHHHHHHHHHHHhC-------------------CccccchhhHHHHHHHHHHHHhcCCCcHHHHHHHHHHHHHHHHHHh
+  Q Thu_May_12_19: 1476 NHAKEVLPLAFLGMH-------------------EIADEEKSEKEECNLWTEVWQENVPGSFGGIRLYLQELITITQKAL 1536 (1845)
+  Q Consensus      1476 ~~~~~ilp~l~~~~~-------------------d~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~~~ii~~l~~~L 1536 (1845)
+                        ++...+++.+.....                   +.+..++.+..++..+..++..+....+..+..++..+++.+...+
+  T Consensus       778 ~~l~~l~~~l~~~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~l~~~~~~~~~~~~~~l~~~l~~~l  857 (1078)
+  T 3w3w_A          778 DQLAAFTKGVSANLTDTYERMQDRHGDGDEYNENIDEEEDFTDEDLLDEINKSIAAVLKTTNGHYLKNLENIWPMINTFL  857 (1078)
+  T ss_dssp             HHHHHHHHHHHHHHHHHHHHHSCC----CCSCC------CHHHHHHHHHHHHHHHHHHHHHTTTHHHHHGGGHHHHHHHH
+  T ss_pred             HHHHHHHHHHHHHHHHHHHHHHHHHHhcccCCchhhhhhhhhHHHHHHHHHHHHHHHHHHhhHHHHHHHHHHHHHHHHHh
+
+
+  Q ss_pred             cCCcHHHHHHHHHHHHHHHHHhcccchhHHHHHHHHHHHHcCCCCchhHHHHHHHHHHHHHhccHHhhhccccchHHHHH
+  Q Thu_May_12_19: 1537 QSQSWKMKAQGAIAMASIAKQTSSLVPPYLGMILTALLQGLAGRTWAGKEELLKAIACVVTACSAELEKSVPNQPSTNEI 1616 (1845)
+  Q Consensus      1537 ~~~~~~~r~~a~~aL~~i~~~~~~~~~~~l~~l~~~ll~~l~~~~~~~r~~~l~~L~~l~~~~~~~~~~~~~~~~~~~~i 1616 (1845)
+                        .++++..|..+..++++++..++....++++.+++.++..+++.++++|.+++.++|.++...+..+.      ++..++
+  T Consensus       858 ~~~~~~~r~~al~~l~~l~~~~~~~~~~~~~~l~~~l~~~l~d~~~~vr~~A~~~lg~l~~~~~~~~~------~~~~~~  931 (1078)
+  T 3w3w_A          858 LDNEPILVIFALVVIGDLIQYGGEQTASMKNAFIPKVTECLISPDARIRQAASYIIGVCAQYAPSTYA------DVCIPT  931 (1078)
+  T ss_dssp             C--CHHHHHHHHHHHHHHHTC--CCCHHHHHHHHHHHHHHHTCSCHHHHHHHHHHHHHHHHHSSTTTH------HHHHHH
+  T ss_pred             CCCcHHHHHHHHHHHHHHHHHcchhHHHHHHHHHHHHHHHccCCCHHHHHHHHHHHHHHHHhCcHHHH------HHHHHH
+
+
+  Q ss_pred             HHHHHHHHhhCc------HHHHHHHHHHHHHHHHHCCchHHHHHHHHHHHHHhhcccccccccccccchhhhhhhhhHHH
+  Q Thu_May_12_19: 1617 LQAVLKECSKEN------VKYKIVAISCAADILKATKEDRFQEFSNIVIPLIKKNSLESSGVRTTKNEEENEKEKELQLE 1690 (1845)
+  Q Consensus      1617 ~~~l~~~~~~~~------~~~r~~a~~~L~~l~~~~~~~~~~~l~~~~~~~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1690 (1845)
+                        ++.+.+.+..++      ..++..|+.++++++...++.. +.+..+++.++..+.-.      .+.            +
+  T Consensus       932 l~~L~~~l~~~~~~~~~~~~~~~~a~~al~~ll~~~~~~~-~~~~~~~~~~l~~lp~~------~d~------------~  992 (1078)
+  T 3w3w_A          932 LDTLVQIVDFPGSKLEENRSSTENASAAIAKILYAYNSNI-PNVDTYTANWFKTLPTI------TDK------------E  992 (1078)
+  T ss_dssp             HHHHHHHTC--CCSSGGGHHHHHHHHHHHHHHHHHTTTSC-C--CHHHHHHHTTCCCC------SCH------------H
+  T ss_pred             HHHHHHHHhCcccCchhhhhHHHHHHHHHHHHHHhCcccC-CCHHHHHHHHHHhCCCC------CcH------------H
+
+
+  Q ss_pred             HHHHHHHHHHHHcccccccH--HHHHHHHHHHHHHHh--cccCHHHHHHHHHHHHHHHHHHhh
+  Q Thu_May_12_19: 1691 YLLGAFESLGKAWPRNAETQ--RCYRQELCKLMCERL--KLSTWKVQLGVLQSMNAFFQGLML 1749 (1845)
+  Q Consensus      1691 ~~~~~~~~l~~~~~~~~~~~--~~~~~~i~~~l~~~~--~~~~~~v~~~~l~~l~~l~~~~~~ 1749 (1845)
+                        ....++.++..++.......  ..++..+++.+...+  +...-.+|..+...++.+....+.
+  T Consensus       993 e~~~~~~~l~~L~~~~~~~~l~~~~l~~i~~~~~~~l~~~~~~~~~~~~~~~~~~~~~~~~~~ 1055 (1078)
+  T 3w3w_A          993 AASFNYQFLSQLIENNSPIVCAQSNISAVVDSVIQALNERSLTEREGQTVISSVKKLLGFLPS 1055 (1078)
+  T ss_dssp             HHHHHHHHHHC--------CCSTTCHHHHHHHHHHHHHTTCCC------HHHHHHHHHHTSCH
+  T ss_pred             HHHHHHHHHHHHHHhCCchhcCcccchHHHHHHHHHhccccCCHHHHHHHHHHHHHHHhhCCH
+
+
+  No 2  Histograms [Show template alignment]  [Show template 3D structure] SCOPPDBMMDBMSDPubMed
+>1u6g_C TIP120 protein, CAND1; cullin repeat, heat repeat, ring finger, ligase; 3.10A {Homo sapiens} SCOP:
+  a.118.1.2 PDB:  4a0c _A
+  Probab=99.97  E-value=6.5e-27  Score=338.56  Aligned_cols=1075  Identities=13%  Similarity=0.115  Sum_probs=0.0
+
+  Q ss_pred             cHHHHHHHHHHccCCCcHHHHHHHHHHHHHHHHhCcHhHHhhhhHHHHHHHHHHHHhcCccHHHHHHHHHHHHHHHhhCc
+  Q Thu_May_12_19:  352 PANIQVVYDGLFGTNTNSKLRTLSLQFVHHICITCPEIKIKPLGPMLLNGLTKLINEYKEDPKLLSMAYSAVGKLSSRMP  431 (1845)
+  Q Consensus       352 ~~~~~~~~~~l~~~~~~~klr~~~l~~~~~~~~~~~~~~l~~~~~~l~~~l~~~l~~~~~~~~~r~~~~~~l~~l~~~~p  431 (1845)
+                        |..+.-++.++.  +.++..|..|+..+..++...+........+.++..|...+.+  ++..+|..+..+||.++...+
+  T Consensus         5 ~~~l~~ll~~l~--~~d~~vR~~A~~~L~~~l~~~~~~~~~~~~~~i~~~L~~~L~d--~~~~vr~~A~~~L~~l~~~~~   80 (1230)
+  T 1u6g_C            5 SYHISNLLEKMT--SSDKDFRFMATNDLMTELQKDSIKLDDDSERKVVKMILKLLED--KNGEVQNLAVKCLGPLVSKVK   80 (1230)
+  T ss_dssp             CHHHHHHHHHTT--CSSHHHHHHHHHHHHHHTSSSCCSCCTTHHHHHHHHHHHHTTC--SSHHHHHHHHHHHHHHHTTSC
+  T ss_pred             HHHHHHHHHhCC--CCChhHHHHHHHHHHHHHhcCCcCCCcccHHHHHHHHHHHhcC--CCHHHHHHHHHHHHHHHHhcc
+
+
+  Q ss_pred             HhhhhhhHHHHHHHHHHhcCchhHHHHHHHHHHHHHHHHhcccH------HHHHHHHHHHHHHhhc-chHHHHHHHHHHH
+  Q Thu_May_12_19:  432 HLFTKDIALVQQLFEALCKEEPETRLAIQEALSMMVGAYSTLEG------AQRTLMEALVASYLIK-PEVQVRQVAVKFA  504 (1845)
+  Q Consensus       432 ~~~~~~~~~l~~lf~~~~~~~~~~~~~~~~aL~~l~~~~~~~~~------~~~~~l~~ll~~~~~~-~~~~~r~~~~~~~  504 (1845)
+                        .  ..-..++..++..+..+++.+|.....+|..+.........      .....+++.+.+.+.+ .....|..++..+
+  T Consensus        81 ~--~~~~~l~~~Ll~~l~~~~~~~r~~a~~aL~~i~~~~~~~~~~~~~~~~~~~~llp~L~~~l~~~~~~~vr~~a~~~L  158 (1230)
+  T 1u6g_C           81 E--YQVETIVDTLCTNMLSDKEQLRDISSIGLKTVIGELPPASSGSALAANVCKKITGRLTSAIAKQEDVSVQLEALDIM  158 (1230)
+  T ss_dssp             H--HHHHHHHHHHHHHTTCSSSHHHHHHHHHHHHHHHHCC-----CCTHHHHHHHHHHHHHHHHSCCSCHHHHHHHHHHH
+  T ss_pred             H--hhHHHHHHHHHHHhCCCcHHHHHHHHHHHHHHHHhCCCccccchhHHHHHHHHHHHHHHHhccCCCHHHHHHHHHHH
+
