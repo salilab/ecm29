@@ -241,7 +241,7 @@ if '--mmcif' in sys.argv:
         e = po._add_simple_ensemble(analysis.steps[-1],
                                     name="Cluster %d" % ncluster,
                                     num_models=cluster['size'],
-                                    drmsd=None, num_models_deposited=1,
+                                    drmsd=60., num_models_deposited=1,
                                     localization_densities={},
                                     ensemble_file=None)
         # Add localization density for ecm29
