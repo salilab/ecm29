@@ -19,6 +19,23 @@ import IMP.pmi.output
 import IMP.rmf
 import RMF
 
+def fix_rmf(mhs):
+    """Chains are stored in random order in the RMF files. Put them in the
+       correct (modeled) order"""
+    correct_order = ['Rpt6', 'Rpt4', 'Rpt5', 'Rpt2', 'Rpt3', 'Rpt1', 'Rpn12',
+                     'Rpn10', 'Rpn11', 'Rpn15', 'Rpn1', 'Rpn2', 'Rpn3',
+                     'Rpn5', 'Rpn6', 'Rpn7', 'Rpn8', 'Rpn9', 'ecm29']
+    state, = mhs[0].get_children()
+    children = state.get_children()
+
+    names = {}
+    for c in children:
+        state.remove_child(0)
+        names[c.get_name()] = c
+
+    for mn in correct_order:
+        state.add_child(names[mn])
+
 class IMPCluster(object):
     def __init__(self, directory, list_file):
         self.directory = directory
@@ -83,6 +100,7 @@ for i in range(cluster_size):
     m = IMP.Model()
     r = RMF.open_rmf_file_read_only(cluster.get_rmf_file(i))
     mhs = IMP.rmf.create_hierarchies(r, m)
+    fix_rmf(mhs)
     # Make sure rigid body coordinates are up to date
     m.update()
     print("Adding coordinates for model %d of %d" % (i + 1, cluster_size))
