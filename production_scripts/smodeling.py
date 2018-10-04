@@ -254,7 +254,7 @@ if '--mmcif' in sys.argv:
 
     # Finally, we found two clusters
     clusters = [{'rmf':'280_5415.rmf3'},
-                {'rmf':'307_6895.rmf3'}]
+                {'rmf':'10_2355.rmf3'}]
     for ncluster, cluster in enumerate(clusters):
         with open('../Results/clustering/cluster.%d.all.txt' % ncluster) as fh:
             cluster['size'] = len(fh.readlines())
