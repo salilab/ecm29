@@ -268,12 +268,17 @@ if '--mmcif' in sys.argv:
 
     tmpd = tempfile.mkdtemp()
     for ncluster, cluster in enumerate(clusters):
+        r = ihm.location.Repository(doi="10.5281/zenodo.1445841",
+                  url="https://zenodo.org/record/1445841/files/cluster%d.dcd"
+                      % ncluster)
+        f = ihm.location.OutputFileLocation(path='.', repo=r,
+                    details="All ensemble structures for cluster %d" % ncluster)
         e = po._add_simple_ensemble(analysis.steps[-1],
                                     name="Cluster %d" % ncluster,
                                     num_models=cluster['size'],
                                     drmsd=60., num_models_deposited=1,
                                     localization_densities={},
-                                    ensemble_file=None)
+                                    ensemble_file=f)
         # Add localization density for ecm29
         loc = ihm.location.OutputFileLocation(
                '../Results/localizations_densities/%d_ecm29.mrc' % (ncluster+1))
