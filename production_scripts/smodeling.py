@@ -17,6 +17,9 @@ import IMP.pmi.restraints
 import IMP.pmi.restraints.stereochemistry
 import IMP.pmi.restraints.crosslinking
 
+sys.path.append('../util/')
+import make_archive
+
 
 #---------------------------
 # Define Input Files
@@ -293,5 +296,17 @@ if '--mmcif' in sys.argv:
     for r in po.system.restraints:
         if hasattr(r, 'linker_type') and r.linker_type == 'Lan':
             r.linker_type = 'DSSO'
+
+    # Point to repositories where files are deposited
+    repos = [ihm.location.Repository(
+          doi="10.5281/zenodo.1445841", root="..",
+          url="https://zenodo.org/record/1445841/files/ecm29-master.zip",
+          top_directory="ecm29-master")]
+    for subdir, zipname in make_archive.ARCHIVES.items():
+        repos.append(ihm.location.Repository(
+              doi="10.5281/zenodo.1445841", root="../%s" % subdir,
+              url="https://zenodo.org/record/1445841/files/%s.zip" % zipname,
+              top_directory=os.path.basename(subdir)))
+    po.system.update_locations_in_repositories(repos)
 
     po.flush()

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1445841.svg)](https://doi.org/10.5281/zenodo.1445841)
+
 These scripts demonstrate the use of [IMP](https://integrativemodeling.org), [MODELLER](https://salilab.org/modeller), and [PMI](https://github.com/salilab/pmi) in the modeling of the proteasome/ecm29 complex using DSSO chemical cross-links.
 
 **Localizing ecm29 on the proteasome using integrative structure modeling**  
