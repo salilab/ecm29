@@ -8,6 +8,10 @@ import IMP.container
 import IMP.rmf
 import os, sys
 import ihm
+try:
+    from ihm import cross_linkers
+except ImportError:
+    pass
 import IMP.pmi
 import IMP.pmi.mmcif
 import IMP.pmi.topology
@@ -301,6 +305,8 @@ if '--mmcif' in sys.argv:
     for r in po.system.restraints:
         if hasattr(r, 'linker_type') and r.linker_type == 'Lan':
             r.linker_type = 'DSSO'
+        elif hasattr(r, 'linker') and r.linker.auth_name == 'Lan':
+            r.linker = cross_linkers.dsso
 
     # Point to repositories where files are deposited
     repos = [ihm.location.Repository(
