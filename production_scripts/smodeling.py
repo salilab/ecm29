@@ -9,6 +9,10 @@ import IMP.rmf
 import os, sys
 import ihm
 try:
+    import ihm.reference
+except ImportError:
+    pass
+try:
     from ihm import cross_linkers
 except ImportError:
     pass
@@ -249,6 +253,21 @@ def fix_rmf_file(original_rmf, molnames, tmpd):
 if '--mmcif' in sys.argv:
     import tempfile
     import shutil
+    # Link entities to UniProt
+    if hasattr(ihm, 'reference'):
+        for subunit, accession in (
+                ('Rpt6.0', 'P62195'), ('Rpt4.0', 'P62333'),
+                ('Rpt5.0', 'P17980'), ('Rpt2.0', 'P62191'),
+                ('Rpt3.0', 'P43686'), ('Rpt1.0', 'P35998'),
+                ('Rpn12.0', 'P48556'), ('Rpn10.0', 'P55036'),
+                ('Rpn11.0', 'O00487'), ('Rpn15.0', 'P60896'),
+                ('Rpn1.0', 'Q13200'), ('Rpn2.0', 'Q99460'),
+                ('Rpn3.0', 'O43242'), ('Rpn5.0', 'O00232'),
+                ('Rpn6.0', 'O00231'), ('Rpn7.0', 'Q15008'),
+                ('Rpn8.0', 'P51665'), ('Rpn9.0', 'Q9UNM6'),
+                ('ecm29.0', 'Q5VYK3')):
+            ref = ihm.reference.UniProtSequence.from_accession(accession)
+            e = po.asym_units[subunit].entity.references.append(ref)
     # Correct number of output models to account for multiple runs
     protocol = po.system.orphan_protocols[-1]
     protocol.steps[-1].num_models_end = 3750000
