@@ -179,10 +179,11 @@ xldb.create_set_from_file(datadirectory+'xlinks.csv')
 
 xl1 = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(
     root_hier=representation,
-    CrossLinkDataBase=xldb,
+    database=xldb,
     length=21,
     label="Lan",
     resolution=1.0,
+    linker=ihm.cross_linkers.dsso,
     slope=0.02)
 
 xl1.rs.set_weight(25.0)
@@ -316,11 +317,6 @@ if '--mmcif' in sys.argv:
 
         model = po.add_model(e.model_group)
     shutil.rmtree(tmpd)
-
-    # Correct crosslinker type from "Lan" to DSSO
-    for r in po.system.restraints:
-        if hasattr(r, 'linker') and r.linker.auth_name == 'Lan':
-            r.linker = ihm.cross_linkers.dsso
 
     # Point to repositories where files are deposited
     repos = [ihm.location.Repository(
