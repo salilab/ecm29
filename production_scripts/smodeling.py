@@ -8,6 +8,7 @@ import IMP.container
 import IMP.rmf
 import os, sys
 import ihm
+import ihm.dumper
 import ihm.cross_linkers
 try:
     import ihm.reference
@@ -70,7 +71,7 @@ bs.dry_run = '--dry-run' in sys.argv
 
 if '--mmcif' in sys.argv:
     # Record the modeling protocol to an mmCIF file
-    po = IMP.pmi.mmcif.ProtocolOutput(open('ecm29.cif', 'w'))
+    po = IMP.pmi.mmcif.ProtocolOutput()
     bs.system.add_protocol_output(po)
     po.system.title = ('The proteasome-interacting Ecm29 protein disassembles '
                        'the 26S proteasome in response to oxidative stress')
@@ -330,4 +331,6 @@ if '--mmcif' in sys.argv:
               top_directory=os.path.basename(subdir)))
     po.system.update_locations_in_repositories(repos)
 
-    po.flush()
+    po.finalize()
+    with open('ecm29.cif', 'w') as fh:
+        ihm.dumper.write(fh, [po.system])
