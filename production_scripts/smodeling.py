@@ -145,8 +145,8 @@ sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
 print("ilan0", sf.evaluate(False))
 ev1 = IMP.pmi.restraints.stereochemistry.ExcludedVolumeSphere(included_objects = ecm29,
                                                               resolution=10)
-ev1.add_to_model()
 ev1.set_label('ecm29')
+ev1.add_to_model()
 outputobjects.append(ev1)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
@@ -156,9 +156,9 @@ ev2 = IMP.pmi.restraints.stereochemistry.ExcludedVolumeSphere(included_objects =
                                                               other_objects = p26ps,
                                                               resolution=10)
 
-ev2.add_to_model()
 ev2.rs.set_weight(1.0)
 ev2.set_label('all')
+ev2.add_to_model()
 outputobjects.append(ev2)
 
 sf = IMP.core.RestraintsScoringFunction(IMP.pmi.tools.get_restraint_set(m))
