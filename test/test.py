@@ -6,8 +6,12 @@ import shutil
 import sys
 import subprocess
 import ihm.reader
+import IMP
+import pickle
+
 
 TOPDIR = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]), '..'))
+
 
 class Tests(unittest.TestCase):
     def run_modeller_script(self, script_name, model_name, resrng):
@@ -36,6 +40,36 @@ class Tests(unittest.TestCase):
         os.chdir(os.path.join(TOPDIR, 'production_scripts'))
         p = subprocess.check_call(["python", "smodeling.py", "--test"])
         # todo: assert outputs, run analysis
+
+    def test_pickle(self):
+        """Test that pickled ReplicaExchange object works"""
+        # Set up modeling but don't run sampling
+        os.chdir(os.path.join(TOPDIR, 'production_scripts'))
+        with open('smodeling.py') as fh:
+            contents = fh.read().replace('mc1.execute_macro()', '')
+        g = {}
+        exec(contents, g)
+        mc1 = g['mc1']
+        del g
+        mc1.vars['number_of_frames'] = 2
+
+        dump = pickle.dumps((mc1.model, mc1))
+
+        # Run the original ReplicaExchange and get the final score
+        IMP.random_number_generator.seed(99)
+        mc1.execute_macro()
+        rs = IMP.pmi.tools.get_restraint_set(mc1.model)
+        original_score = rs.evaluate(False)
+        del mc1, rs
+
+        # With the same random seed, we should get the exact same trajectory
+        # with the pickled object
+        newm, newmc1 = pickle.loads(dump)
+        IMP.random_number_generator.seed(99)
+        newmc1.execute_macro()
+        rs = IMP.pmi.tools.get_restraint_set(newmc1.model)
+        new_score = rs.evaluate(False)
+        self.assertAlmostEqual(original_score, new_score, delta=1e-4)
 
     def test_mmcif(self):
         """Test generation of mmCIF output"""
